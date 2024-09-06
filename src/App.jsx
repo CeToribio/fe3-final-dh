@@ -3,8 +3,8 @@ import Home from "./Pages/Home";
 import Detail from "./Pages/Detail";
 import Contact from "./Pages/Contact";
 import Favs from "./Pages/Favs";
-import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
 import { routes } from "./utils/routes";
 
 function App() {
