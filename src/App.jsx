@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Detail from "./pages/Detail";
-import Contact from "./pages/Contact";
-import Favs from "./pages/Favs";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Home from "./Pages/Home";
+import Detail from "./Pages/Detail";
+import Contact from "./Pages/Contact";
+import Favs from "./Pages/Favs";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 import { routes } from "./utils/routes";
 
 function App() {
