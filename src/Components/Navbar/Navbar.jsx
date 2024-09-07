@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="div-navbar-second-section">
         <div className="div-links">
           <Link to={routes.home} className="nav-link">Home</Link>
-          <Link to={routes.contact} className="nav-link">Contacto</Link>
+          <Link to={routes.contact} className="nav-link">Contáctanos</Link>
           <Link to={routes.favs} className="nav-link">Favoritos</Link>
         </div>
         {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
