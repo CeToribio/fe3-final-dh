@@ -1,5 +1,8 @@
 //import React from "react";
 import { useNavigate } from "react-router-dom";
+import imgDentist from "../../../public/images/doctor.jpg";
+import "./card.css";
+import imgHeart from "../../../public/images/heart.svg";
 
 const Card = ({ name, username, id }) => {
   const navigate = useNavigate();
@@ -9,23 +12,22 @@ const Card = ({ name, username, id }) => {
   };
 
   return (
-    <div
-      onClick={() => {
-        navigate("/dentist/" + id);
-      }}
-      className="div-card"
-    >
-      {/* En cada card deberan mostrar en name - username y el id */}
-      <h3>{name}</h3>
-      <p>{username}</p>
-      <p>{id}</p>
-
+    <div className="div-card">
       {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-
-      {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
+      {/* En cada card deberan mostrar en name - username y el id */}
+      <img src={imgDentist} alt="imagen dentista" className="img-dentist" />
+      <h4
+        onClick={() => {
+          navigate("/dentist/" + id);
+        }}
+      >
+        {name}
+      </h4>
+      <p>{username}</p>
       <button onClick={addFav} className="favButton">
-        Add fav
+        Añadir a favoritos <img src={imgHeart} alt="" />
       </button>
+      {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
     </div>
   );
 };

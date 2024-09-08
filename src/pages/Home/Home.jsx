@@ -3,6 +3,7 @@ import axios from "axios";
 import Card from "../../Components/Card/Card";
 import "./home.css";
 import { useState, useEffect } from "react";
+// import loadingImg from "../../../public/images/loading.svg";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -33,9 +34,11 @@ const Home = () => {
       <p>Encuentra a nuestros dentistas</p>
       <div className="card-grid">
         {/* Aqui deberias renderizar las cards */}
-        {loading ? <h3>Cargando...</h3> : dentists.map((dentist) => (
-          <Card key={dentist.id} {...dentist} />
-        ))}
+        {loading ? (
+           <h4>Cargando...</h4>
+        ) : (
+          dentists.map((dentist) => <Card key={dentist.id} {...dentist} />)
+        )}
       </div>
     </main>
   );
