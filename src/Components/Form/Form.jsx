@@ -54,12 +54,12 @@ const Form = () => {
         showConfirmButton: false,
         timer: 2500,
       });
+      SetContactUSer({
+        name: "",
+        email: "",
+        message: "",
+      });
     }
-    SetContactUSer({
-      name: "",
-      email: "",
-      message: "",
-    });
   };
 
   return (
