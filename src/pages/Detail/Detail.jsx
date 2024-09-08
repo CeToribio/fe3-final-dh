@@ -3,6 +3,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "./detail.css";
+import imgDentist from "../../../public/images/doctor.jpg";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -27,21 +29,29 @@ const Detail = () => {
       }
     };
     axiosDetail();
-  });
+  }, []);
 
   return (
     <>
-      <div>
+      <div className="div-detail">
+        <h2>¡Conozca a nuestro dentista! </h2>
         {loading ? (
-          <h3>Cargando...</h3>
+          <h4>Cargando...</h4>
         ) : (
-          <div>
-            <h1>Detail Dentist id </h1>
+          <div className="div-dentist">
             {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
             {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-            <h2>{dentist.name}</h2>
-            <p>{dentist.email}</p>
-            <p>{dentist.phone}</p>
+            <img
+              src={imgDentist}
+              alt="imagen dentista"
+              className="img-dentist-detail"
+            />
+            <div className="div-info-dentist">
+              <h2>{dentist.name}</h2>
+              <p>{dentist.email}</p>
+              <p>{dentist.phone}</p>
+              <p>{dentist.website}</p>
+            </div>
           </div>
         )}
       </div>
