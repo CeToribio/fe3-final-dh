@@ -8,6 +8,17 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   font-family: "Poppins", sans-serif;
+}
+
+.card-grid{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* border: 2px solid yellow; */
+  gap: 30px;
+  margin-top: 20px;
 }
