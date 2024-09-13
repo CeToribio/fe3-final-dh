@@ -6,7 +6,7 @@ import Favs from "./pages/Favs.jsx";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import { routes } from "./utils/routes.js";
-import ErrorPageNotFound from "./Pages/Error_404/Error_404.jsx";
+import ErrorPageNotFound from "./pages/Error_404/Error_404.jsx";
 
 function App() {
   return (
