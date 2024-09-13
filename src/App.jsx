@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home/Home.jsx";
-import Detail from "./Pages/Detail/Detail.jsx";
-import Contact from "./Pages/Contact/Contact.jsx";
-import Favs from "./Pages/Favs.jsx";
+import Home from "./pages/Home/Home.jsx";
+import Detail from "./pages/Detail/Detail.jsx";
+import Contact from "./pages/Contact/Contact.jsx";
+import Favs from "./pages/Favs.jsx";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import { routes } from "./utils/routes.js";
