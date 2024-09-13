@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home/Home";
-import Detail from "./Pages/Detail/Detail";
-import Contact from "./Pages/Contact/Contact";
-import Favs from "./Pages/Favs";
-import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
-import { routes } from "./utils/routes";
-import ErrorPageNotFound from "./Pages/Error_404/Error_404";
+import Home from "./pages/Home/Home.jsx";
+import Detail from "./pages/Detail/Detail.jsx";
+import Contact from "./pages/Contact/Contact.jsx";
+import Favs from "./pages/Favs.jsx";
+import Navbar from "./Components/Navbar/Navbar.jsx";
+import Footer from "./Components/Footer/Footer.jsx";
+import { routes } from "./utils/routes.js";
+import ErrorPageNotFound from "./pages/Error_404/Error_404.jsx";
 
 function App() {
   return (
