@@ -3,12 +3,15 @@ import { useNavigate } from "react-router-dom";
 import imgDentist from "../../../public/images/doctor.jpg";
 import "./card.css";
 import imgHeart from "../../../public/images/heart.svg";
+import { useContextGlobal } from "../../Context/global.context";
 
 const Card = ({ name, username, id }) => {
   const navigate = useNavigate();
+  const {setFavs} = useContextGlobal();
 
   const addFav = () => {
     // Aqui iria la logica para agregar la Card en el localStorage
+    setFavs((prevFavs) => [...prevFavs, { name, username, id }]);
   };
 
   return (

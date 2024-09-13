@@ -34,7 +34,7 @@ const Detail = () => {
   return (
     <>
       <div className="div-detail">
-        <h2>¡Conozca a nuestro dentista! </h2>
+        <h2>¡Conoce a nuestro dentista! </h2>
         {loading ? (
           <h4>Cargando...</h4>
         ) : (
