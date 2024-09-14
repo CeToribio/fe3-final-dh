@@ -7,11 +7,18 @@ import { useContextGlobal } from "../../Context/global.context";
 
 const Card = ({ name, username, id }) => {
   const navigate = useNavigate();
-  const {setFavs} = useContextGlobal();
+  const { favs, setFavs, isFavorite } = useContextGlobal();
 
-  const addFav = () => {
-    // Aqui iria la logica para agregar la Card en el localStorage
-    setFavs((prevFavs) => [...prevFavs, { name, username, id }]);
+  const addOrRemoveFav = () => {
+    const existingFavIndex = favs.findIndex((dentist) => dentist.id === id);
+
+    if (existingFavIndex !== -1) {
+      //delete
+      setFavs((prevFavs) => prevFavs.filter((dentist) => dentist.id !== id));
+    } else {
+      //add
+      setFavs((prevFavs) => [...prevFavs, { name, username, id }]);
+    }
   };
 
   return (
@@ -27,8 +34,11 @@ const Card = ({ name, username, id }) => {
         {name}
       </h4>
       <p>{username}</p>
-      <button onClick={addFav} className="favButton">
-        Añadir a favoritos <img src={imgHeart} alt="" />
+      <button onClick={addOrRemoveFav} className="favButton">
+        {isFavorite(id) ? "Quitar de favoritos" : "Añadir a favoritos"}
+        {!isFavorite(id) && (
+          <img src={imgHeart} alt="Ícono corazón" className="heart-icon" />
+        )}
       </button>
       {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
     </div>

@@ -12,20 +12,41 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* padding: 1rem 4rem 1rem 4rem;
-    padding-right: 10%; */
   background-color: #f8f9fa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+ 
+.navBar-light {
+  background-color: #ffffff;
+  color: #333333;
+}
 
-h2 {
+.navBar-dark {
+  background-color: #333333;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.navBar-light h2 {
   font-size: 1.8rem;
   font-weight: 600;
   color: #6c757d;
 }
+
+.navBar-dark h2{
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+
 
 h2 span {
   color: #d95b48;
@@ -47,11 +68,49 @@ h2 span {
 
 .nav-link {
   text-decoration: none;
-  color: #000000;
   transition: all 0.3s ease;
 }
 
-.nav-link:hover {
+.nav-link-light{
+  color: #000000;
+}
+
+.nav-link-dark{
+  color: #ffffff;
+}
+
+
+.nav-link-light:hover {
   text-decoration: underline;
   color: #d95b48;
 }
+
+.nav-link-light:hover,
+.nav-link-dark:hover {
+  text-decoration: underline;
+  color: #d95b48;
+}
+
+
+.theme-icon-light {
+  color: #212121; 
+}
+
+.theme-icon-dark {
+  color: #efa94a; 
+}
+
+.theme-icon-light,
+.theme-icon-dark {
+  width: 1rem;
+  height: 1rem;
+  padding: 0.5rem;
+
+}
+
+.theme-icon-light:hover,
+.theme-icon-dark:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./detail.css";
 import imgDentist from "../../../public/images/doctor.jpg";
+import { useContextGlobal } from "../../Context/global.context";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -14,6 +15,7 @@ const Detail = () => {
   const [dentist, setDentist] = useState({});
   const [loading, setLoading] = useState(true);
   const url = `https://jsonplaceholder.typicode.com/users/${params.id}`;
+  const { theme } = useContextGlobal();
 
   useEffect(() => {
     const axiosDetail = async () => {
@@ -33,7 +35,7 @@ const Detail = () => {
 
   return (
     <>
-      <div className="div-detail">
+      <div className={`div-detail-${theme}`}>
         <h2>¡Conoce a nuestro dentista! </h2>
         {loading ? (
           <h4>Cargando...</h4>

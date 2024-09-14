@@ -6,10 +6,12 @@ import ig from "../../../public/images/8679433_instagram_fill_icon.svg";
 import whatsapp from "../../../public/images/8679332_whatsapp_icon.svg";
 
 import "./footer.css";
+import { useContextGlobal } from "../../Context/global.context";
 
 const Footer = () => {
+  const { theme } = useContextGlobal();
   return (
-    <footer>
+    <footer className={`footer-${theme}`}>
       <img src={logoDH} alt="DH-logo" className="logo-dh" />
       <div className="div-logos-rs">
         <img src={fb} alt="facebook" className="logo-fb-rs" />

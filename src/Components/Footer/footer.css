@@ -21,6 +21,16 @@ footer {
   z-index: 1;
 }
 
+.footer-light{
+  background-color: #f8f9fa;
+  color: #333333;
+}
+
+.footer-dark{
+  background-color: #333333;
+  color: #ffffff;
+}
+
 .logo-dh {
   width: 14rem;
   height: 4rem;

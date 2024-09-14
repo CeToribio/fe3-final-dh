@@ -33,13 +33,13 @@ export const ContextProvider = ({ children }) => {
     localStorage.setItem("favs", JSON.stringify(favs));
   }, [favs]);
 
-  // const toggleTheme = useCallback(() => {
-  //   setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
-  // }, []);
+  const isFavorite = (id) => {
+    return favs.some(dentist => dentist.id === id);
+  };
 
   return (
     <ContextGlobal.Provider
-      value={{ theme, setTheme, favs, setFavs, dentists }}
+      value={{ theme, setTheme, favs, setFavs, dentists, isFavorite }}
     >
       {children}
     </ContextGlobal.Provider>
