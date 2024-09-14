@@ -1,18 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.div-contact {
-  width: 80%;
-  height: 70vh;
+.div-contact-light,
+.div-contact-dark {
+  width: 100%;
+  height: 100vh;
   padding: 1rem;
-  margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-center;
-  /* justify-content: center; */
   align-items: center;
-  
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-  /* border: 2px solid #d95b48; */
+}
+
+.div-contact-light {
+  color: #333333;
+}
+
+.div-contact-dark {
+  background-color: #878787;
+}
+
+.div-contact-p-dark {
+  color: #ffffff;
 }
